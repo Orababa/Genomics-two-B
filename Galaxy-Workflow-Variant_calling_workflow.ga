@@ -1,0 +1,401 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "Variant calling workflow",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/2.11.0+galaxy0",
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "Download and Extract Reads in FASTA/Q",
+            "outputs": [
+                {
+                    "name": "output_accession",
+                    "type": "fastqsanger"
+                }
+            ],
+            "position": {
+                "bottom": 334,
+                "height": 141,
+                "left": 393,
+                "right": 593,
+                "top": 193,
+                "width": 200,
+                "x": 393,
+                "y": 193
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/2.11.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "69ebb7f46e45",
+                "name": "sra_tools",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"adv\": {\"minID\": null, \"maxID\": null, \"minlen\": null, \"split\": \"true\", \"alignments\": \"both\", \"region\": \"\", \"matepairDist\": \"\", \"readfilter\": \"\", \"spotgroups\": \"\", \"clip\": \"false\", \"skip_technical\": \"false\", \"table\": \"\"}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"input\": {\"input_select\": \"accession_number\", \"__current_case__\": 0, \"accession\": \"SRR1182521\"}, \"outputformat\": \"fastqsanger\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.11.0+galaxy0",
+            "type": "tool",
+            "uuid": "832b6123-b200-4fc4-92c3-995fbb1ac583",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_accession",
+                    "uuid": "c94d7114-314a-41be-a6b2-d59a709f06c9"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "createInterval",
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "Create single interval",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "bed"
+                }
+            ],
+            "position": {
+                "bottom": 514,
+                "height": 81,
+                "left": 393,
+                "right": 593,
+                "top": 433,
+                "width": 200,
+                "x": 393,
+                "y": 433
+            },
+            "post_job_actions": {},
+            "tool_id": "createInterval",
+            "tool_state": "{\"__input_ext\": \"data\", \"chrom\": \"chr2\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"end\": \"208242005\", \"name\": \"S280\", \"start\": \"208242004\", \"strand\": \"minus\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "90cc7515-b1b8-4772-bb00-4397373c834a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file1",
+                    "uuid": "e47be06b-9880-4005-813f-f1400e8b877e"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "createInterval",
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [],
+            "label": null,
+            "name": "Create single interval",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "bed"
+                }
+            ],
+            "position": {
+                "bottom": 634,
+                "height": 81,
+                "left": 393,
+                "right": 593,
+                "top": 553,
+                "width": 200,
+                "x": 393,
+                "y": 553
+            },
+            "post_job_actions": {},
+            "tool_id": "createInterval",
+            "tool_state": "{\"__input_ext\": \"data\", \"chrom\": \"chr2\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"end\": \"208248388\", \"name\": \"R132\", \"start\": \"208248387\", \"strand\": \"minus\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "e9eeaa25-6340-4ae0-8453-98e98ad6c9c2",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file1",
+                    "uuid": "9a58afd8-1c17-4b08-abfc-5a74321f65d0"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "input_file": {
+                    "id": 0,
+                    "output_name": "output_accession"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "FastQC",
+            "outputs": [
+                {
+                    "name": "html_file",
+                    "type": "html"
+                },
+                {
+                    "name": "text_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 505,
+                "height": 312,
+                "left": 613,
+                "right": 813,
+                "top": 193,
+                "width": 200,
+                "x": 613,
+                "y": 193
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "e7b2202befea",
+                "name": "fastqc",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"fastqsanger\", \"adapters\": null, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"contaminants\": null, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"kmers\": \"7\", \"limits\": null, \"min_length\": null, \"nogroup\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.72+galaxy1",
+            "type": "tool",
+            "uuid": "c9e6b1f8-97c5-4b17-972f-8570354002f6",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "html_file",
+                    "uuid": "72f4668e-2199-466f-8734-2c80b9d032e3"
+                },
+                {
+                    "label": null,
+                    "output_name": "text_file",
+                    "uuid": "6856bbc3-c2ee-4e80-b8ed-cb708dde9d9b"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "library|input_1": {
+                    "id": 0,
+                    "output_name": "output_accession"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Bowtie2",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "bam"
+                }
+            ],
+            "position": {
+                "bottom": 485,
+                "height": 172,
+                "left": 613,
+                "right": 813,
+                "top": 313,
+                "width": 200,
+                "x": 613,
+                "y": 313
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "09b2cdb7ace5",
+                "name": "bowtie2",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"__job_resource\": {\"__job_resource__select\": \"no\", \"__current_case__\": 0}, \"analysis_type\": {\"analysis_type_selector\": \"simple\", \"__current_case__\": 0, \"presets\": \"no_presets\"}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"library\": {\"type\": \"single\", \"__current_case__\": 0, \"input_1\": {\"__class__\": \"ConnectedValue\"}, \"unaligned_file\": \"false\", \"aligned_file\": \"false\"}, \"reference_genome\": {\"source\": \"indexed\", \"__current_case__\": 0, \"index\": \"hg38\"}, \"rg\": {\"rg_selector\": \"do_not_set\", \"__current_case__\": 3}, \"sam_options\": {\"sam_options_selector\": \"no\", \"__current_case__\": 1}, \"save_mapping_stats\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.4.2+galaxy0",
+            "type": "tool",
+            "uuid": "57411691-de48-4ce3-b72a-8781130c156c",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "48af4c09-6ccf-4660-947a-e54b578909af"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "reference_source|batchmode|input_bams": {
+                    "id": 4,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "FreeBayes",
+            "outputs": [
+                {
+                    "name": "output_vcf",
+                    "type": "vcf"
+                }
+            ],
+            "position": {
+                "bottom": 305,
+                "height": 112,
+                "left": 833,
+                "right": 1033,
+                "top": 193,
+                "width": 200,
+                "x": 833,
+                "y": 193
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/1.3.1",
+            "tool_shed_repository": {
+                "changeset_revision": "ef2c525bd8cd",
+                "name": "freebayes",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"bam\", \"__job_resource\": {\"__job_resource__select\": \"no\", \"__current_case__\": 0}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\", \"coverage_options\": {\"coverage_options_selector\": \"do_not_set\", \"__current_case__\": 1}, \"options_type\": {\"options_type_selector\": \"simple\", \"__current_case__\": 1}, \"reference_source\": {\"reference_source_selector\": \"cached\", \"__current_case__\": 0, \"batchmode\": {\"processmode\": \"individual\", \"__current_case__\": 0, \"input_bams\": {\"__class__\": \"ConnectedValue\"}}, \"ref_file\": \"hg38\"}, \"target_limit_type\": {\"target_limit_type_selector\": \"do_not_limit\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.3.1",
+            "type": "tool",
+            "uuid": "651551a4-7fa0-4175-8114-a25a7cb896de",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_vcf",
+                    "uuid": "a767bb23-f50d-4497-b746-e25060ef8590"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/1.0.0_rc3+galaxy0",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "bed_vs_interval|bed_input": {
+                    "id": 1,
+                    "output_name": "out_file1"
+                },
+                "vcf_input": {
+                    "id": 5,
+                    "output_name": "output_vcf"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "VCF-BEDintersect:",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "vcf"
+                }
+            ],
+            "position": {
+                "bottom": 335,
+                "height": 142,
+                "left": 1053,
+                "right": 1253,
+                "top": 193,
+                "width": 200,
+                "x": 1053,
+                "y": 193
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/1.0.0_rc3+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "aea8e90ad788",
+                "name": "vcfbedintersect",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"vcf\", \"bed_vs_interval\": {\"bed_vs_interval_selector\": \"bed\", \"__current_case__\": 0, \"bed_input\": {\"__class__\": \"ConnectedValue\"}}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\", \"invert\": \"false\", \"vcf_input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0_rc3+galaxy0",
+            "type": "tool",
+            "uuid": "e0938290-8f62-4bcf-b0ed-b9a2665994b7",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file1",
+                    "uuid": "defb5755-b78b-4987-8ba1-bb583fe31b98"
+                }
+            ]
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/1.0.0_rc3+galaxy0",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "bed_vs_interval|bed_input": {
+                    "id": 2,
+                    "output_name": "out_file1"
+                },
+                "vcf_input": {
+                    "id": 5,
+                    "output_name": "output_vcf"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "VCF-BEDintersect:",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "vcf"
+                }
+            ],
+            "position": {
+                "bottom": 455,
+                "height": 142,
+                "left": 1053,
+                "right": 1253,
+                "top": 313,
+                "width": 200,
+                "x": 1053,
+                "y": 313
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/1.0.0_rc3+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "aea8e90ad788",
+                "name": "vcfbedintersect",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"vcf\", \"bed_vs_interval\": {\"bed_vs_interval_selector\": \"bed\", \"__current_case__\": 0, \"bed_input\": {\"__class__\": \"ConnectedValue\"}}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\", \"invert\": \"false\", \"vcf_input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0_rc3+galaxy0",
+            "type": "tool",
+            "uuid": "bbb2f57f-86b2-45cb-ad01-49f0980db755",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file1",
+                    "uuid": "ef3b182f-4f95-4bd1-83e3-23acf64839f5"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "77d17f82-9f22-4ca9-be59-60dde4147b93",
+    "version": 2
+}
