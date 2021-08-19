@@ -23,6 +23,17 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
 ## Get Your Data
 
+The data for the tutorial can be obtained using two methods;
+1. By pasting the zenodo link to the data library on galaxy upload manager through the paste/fetch option.
+     > copy the zenodo link
+     > open the galaxy upload manager and select the fetch/paste option
+     > Click on the start option and close the upload window
+2. By uploading the downloaded dataset from one's computer library
+     > Click on the galaxy upload manager
+     > Navigate to the choose from local file option
+     > Select the files to be uploaded and click on start
+     > Close the upload window
+
 ## Quality Control
 ### FastQC
 
@@ -207,18 +218,6 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
 
-### [`Run samtools stat` to generate statistics for BAM dataset]
-
-1. On the tools sections, Search and select `samtools stat 🛠️`
-2. Fill with the following details;
-   >BAM File
-   >> Ensure the mapped reads (bam) file of the snippy output is selected.
-
-3. Keep the rest parameters unchanged.
-
-4. Then `Execute`☑️
-
-5. View the output, paying attention to the sequences, reads mapped and reads unmapped results.
 
 
 
