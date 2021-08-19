@@ -20,19 +20,28 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
 ## Introduction
 
+Mycobacterium tuberculosis is a Gram-positive rod-shaped bacterium that is known to cause tuberculosis. Tuberculosis (TB) is one of the world’s most dangerous infectious diseases and contributes to about two million annual deaths globally. Mutational changes in the genome of M. tuberculosis strains is one of the major contributing factors to its multidrug resistance nature and increased virulence. The genomics-two-B team recreated a galaxy tutorial on M. tuberculosis bacterium variant calling which aims at checking singe nucleotide polymorphism (SNP) in the DNA sequence of M. tuberculosis strains by comparing to an ancestral genome. This markdown contains the comprehensive step-wise procedure carried out during the recreation of the tutorial.
 
 ## Get Your Data
 
 The data for the tutorial can be obtained using two methods;
 1. By pasting the zenodo link to the data library on galaxy upload manager through the paste/fetch option.
-     > copy the zenodo link
-     > open the galaxy upload manager and select the fetch/paste option
-     > Click on the start option and close the upload window
+     
+     >> copy the zenodo link
+     
+     >> open the galaxy upload manager and select the fetch/paste option
+     
+     >> Click on the start option and close the upload window
+     
 2. By uploading the downloaded dataset from one's computer library
-     > Click on the galaxy upload manager
-     > Navigate to the choose from local file option
-     > Select the files to be uploaded and click on start
-     > Close the upload window
+     
+     >> Click on the galaxy upload manager
+     
+     >> Navigate to the choose from local file option
+     
+     >> Select the files to be uploaded and click on start
+     
+     >> Close the upload window
 
 ## Quality Control
 ### FastQC
