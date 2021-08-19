@@ -27,21 +27,22 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
 
 ---
-### MultiQC 🛠️
-1. Search and select MultiQC from the tools list and fill in the details as below.
+### [`MultiQC`](http://multiqc.info/) 
 
-    In the Results section
+1. Search and select **`MultiQC- 🛠️`** from the tools list and fill in the details as below.
 
-      Which tool was used generate logs? FastQC
+     >Results
 
-    In the FastQC output section
-
-      Type of FastQC output? Raw data
-
-      Output of BAMtools  FastQC on data: RawData (Select both RawData files)
+      >`Which tool was used generate logs?` **_FastQC_**
+      >> FastQC output
+      
+      >> `Type of FastQC output?` **_Raw data_**
+      
+      >>>`Output of BAMtools` **_FastQC on data: RawData_** (Select both RawData files)
 2. Keep the rest parameters unchanged
-3. Then Execute☑️
+3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
+
 -----
 
 ## Look For Contamination with Kraken2 (Optional)
