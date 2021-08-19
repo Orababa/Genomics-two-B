@@ -8,7 +8,7 @@ Genomics lab working on targeted sequencing dataset
 
 
 ---
-### MultiQC
+### MultiQC 🛠️
 1. Search and select MultiQC from the tools list and fill in the details as below.
     
     In the Results section
