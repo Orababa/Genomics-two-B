@@ -160,6 +160,10 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
  
 ## Different Samples, Different Stories (Optional)
+### feach data and introduction 
+1.Fetch the data from EBI European Nucleotide Archive
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
 
 
 
