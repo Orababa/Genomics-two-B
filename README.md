@@ -56,7 +56,10 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 ### [`TB Variant Filter`]
 
 1. Search and select **`TB Variant Filter- 🛠️`** from the tools list and adjust filters as below.
-       >Select Filter variants by region, Filter variants close to indels and Filter sites by read alignment depth.
+
+
+       >>'Select Filter variants by region, Filter variants close to indels and Filter sites by read alignment depth.
+
 2. Choose the VCF files you wish to be filtered.
 3. **`Execute☑️`**
 4. Open the new VCF file.
