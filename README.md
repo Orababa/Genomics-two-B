@@ -209,7 +209,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 >> " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
 
-2. **`Execute☑️`** 
+2. **`Execute☑️`*
 
 3. Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
