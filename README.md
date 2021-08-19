@@ -59,9 +59,9 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
  
    >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
    
-   >>“Input FASTQ file (R1/first of pair)”: 004-2_1.fastq.gz
+   >>“Input FASTQ file (R1/first of pair)”: SRR12416842_1.fastq.gz
    
-   >>“Input FASTQ file (R2/second of pair)”: 004-2_2.fastq.gz
+   >>“Input FASTQ file (R2/second of pair)”: SRR12416842_2.fastq.gz
    
    >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
    
@@ -201,7 +201,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 
 
-### BAM Coverage Plotter
+### *_BAM Coverage Plotter_*
 1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
 >> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
 
