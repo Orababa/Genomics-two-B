@@ -47,8 +47,13 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
 
 
+
+### [**_quality trimming_**] (to clean up the reads and remove the poor quality sections)
+
+
 ### [**_quality trimming_**]
  (to clean up the reads and remove the poor quality sections)
+
 
 1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
  
@@ -111,11 +116,15 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 3. **`Execute☑️`**
 4. Open the new VCF file.
 
-###  
+  
 ### ['Text transformation with sed'] 
 1. “File to process”: TB Variant Filter on data 21
 2. “SED Program”: s/GENE_//g 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
+
+### ['TB variant report']
+1. “Input SnpEff annotated M.tuberculosis VCF(s)”: Text transformation on data 21
+2. “TBProfiler Drug Resistance Report (Optional)”: TB-Profiler Profile on data 21: Results.json
 
 ### View Snippy Output in JBrowse 
 
@@ -178,20 +187,11 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 4. A new dataset will be created in your history, containing the JBrowse interactive visualisation
 
  
-## Different Samples, Different Stories (Optional)
-### feach data and introduction 
+## Different Samples,Different Stories (Optional)
+### feach data and introduction
 1.Fetch the data from EBI European Nucleotide Archive
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
-
-
-
-
-
-
-
-
-
 
 
 
