@@ -282,3 +282,28 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 # <img src = "https://user-images.githubusercontent.com/70078984/130058100-b045f3e2-f951-4148-aa71-4388391f5389.png" alt = "contibutors" width = "50" height = "50" /> </a>Contributors
 
+Name | Slack Username | Contribution
+---| ---| ---
+Orababa Oluwatosin| @Toxhin | Obtaining Dataset and Introduction
+Adeniran Fadekemi| @Morenike| Quality Control of Input Dataset Using FastQC 
+Suchitra Thapa| @Suchitraa| Combining QC Results Using MultiQC
+Michael Olufemi| @Micholufemi| Quality Trimming Using Trimmomatic
+Adedoyin Adesoye| @Adedoyinsoye| Search for Contamination Using Kraken2
+Adedotun Sobambo| @AdunniEagle| Finding Variants Using Snippy
+Ahmed Sameh| @Ahhmedsamehh| Filtering TB Variant	
+Neemah Jinadu| @Neemahj| TB profiling Using TB Profiler Profile
+Camilia Mohamed Kamal| @CamiliaKamal2|	Text Transformation with sed
+Christina Ashraf| @christina| TB variant report
+Engy Khaled| @Engy|	View Snippy Output in JBrowser
+Hossam Hatim| @HossamHatem|	Obtaining Dataset (OPTIONAL TASK) and Introduction
+Menna|@Mennatullah|	Examining Sequence Quality with FastQC
+Alabi Mosopefoluwa| @Mosopefoluwa|	Examining Sample Composition with Kraken2
+Mustafa Mansour| @Mustafa|	Fetching Data and Introduction
+Amira Tounsi| @AmiraT|	Examining Sequence Quality with FastQC
+Omnia Alaa| @Omnia|	Quality Trimming with Trimmomatic
+Suliat Jimoh| @SuliJimoh|	Finding Variants Using Snippy
+Osmond Obinna| @Osmond|	Running Samtools on the BAM File
+Yomna Yasser| @YomnaElkaramany|	Running BAM Coverage Plotter on the BAM File
+
+
+###### Each team member worked on a subtask in the analysis and updated the markdown.
