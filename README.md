@@ -59,9 +59,9 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
  
    >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
    
-   >>“Input FASTQ file (R1/first of pair)”: 004-2_1.fastq.gz
+   >>“Input FASTQ file (R1/first of pair)”: SRR12416842_1.fastq.gz
    
-   >>“Input FASTQ file (R2/second of pair)”: 004-2_2.fastq.gz
+   >>“Input FASTQ file (R2/second of pair)”: SRR12416842_2.fastq.gz
    
    >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
    
