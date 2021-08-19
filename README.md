@@ -98,6 +98,12 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 3. **`Execute☑️`**
 4. Open the new VCF file.
 
+###  
+### ['Text transformation with sed'] 
+1. “File to process”: TB Variant Filter on data 21
+2. “SED Program”: s/GENE_//g 
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
+
 ### View Snippy Output in JBrowse 
 
 ### [`JBrowse`]
