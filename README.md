@@ -167,6 +167,16 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 1.Fetch the data from EBI European Nucleotide Archive
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
+###   check for data quality using fastQC
+  { to find out the quality report} 
+1. Select from options at the left Fasta/Fastq 
+2. Choose FastQC to read quality report **FastQC**
+3. Choose your data set 
+>> insert multiple files, and choose the previously uploaded files
+>> follow default parameters 
+4. press **execute**
+5. Four files will be created composed of two html page for the quality report 
+6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
 
 
 
