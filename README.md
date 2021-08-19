@@ -51,32 +51,7 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 ### [**_quality trimming_**] (to clean up the reads and remove the poor quality sections)
 
 
-### [**_quality trimming_**]
- (to clean up the reads and remove the poor quality sections)
 
-
-1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
- 
-   >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
-   
-   >>“Input FASTQ file (R1/first of pair)”: SRR12416842_1.fastq.gz
-   
-   >>“Input FASTQ file (R2/second of pair)”: SRR12416842_2.fastq.gz
-   
-   >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
-   
-2. “+Insert Trimmomatic Operation”:
-   >> “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
-   >> “Minimum length of reads to be kept”: 20
-  
-3. **`Execute☑️`**
-4. A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a2a0e9f4987bf4808/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a0c5fe35823cc6abc/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33ae46b0f83bf78d1b5/display?to_ext=fastqsanger.gz
-
-5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
 
 
@@ -201,6 +176,44 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 
 
+
+
+
+### quality trimming
+ (to clean up the reads and remove the poor quality sections)
+
+
+1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
+ 
+   >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
+   
+   >>“Input FASTQ file (R1/first of pair)”:  SRR12416842_1.fastq.gz
+   
+   >>“Input FASTQ file (R2/second of pair)”:  SRR12416842_2.fastq.gz
+   
+   >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
+   
+2. “+Insert Trimmomatic Operation”:
+   >> “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
+   >> “Minimum length of reads to be kept”: 20
+  
+3. **`Execute☑️`**
+4. A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a2a0e9f4987bf4808/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a0c5fe35823cc6abc/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33ae46b0f83bf78d1b5/display?to_ext=fastqsanger.gz
+
+5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+
+
+
+
+
+
+
+
+
 ### *_BAM Coverage Plotter_*
 1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
 >> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
@@ -209,7 +222,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 >> " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
 
-2. **`Execute☑️`** 
+2. **`Execute☑️`*
 
 3. Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
