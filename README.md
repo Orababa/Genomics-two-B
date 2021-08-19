@@ -48,9 +48,7 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
 
 ### [**_quality trimming_**]
-
-
-### ['quality trimming'] (to clean up the reads and remove the poor quality sections)
+ (to clean up the reads and remove the poor quality sections)
 
 1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
  
