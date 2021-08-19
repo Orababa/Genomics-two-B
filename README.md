@@ -64,9 +64,67 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 3. **`Execute☑️`**
 4. Open the new VCF file.
 
-## View Snippy Output in JBrowse
+### View Snippy Output in JBrowse 
 
+### [`JBrowse`]
 
+1. going through VCF files and to be more clear Search and select **JBrowse 🛠️`** from the tools list and adjust filters as below.
+
+     >>“Reference genome to display”: Use a genome from history
+     
+     >>“Select the reference genome”: (it would be selected directly from your History)
+     
+     >>Produce Standalone Instance”: Yes
+     
+     >>"Genetic Code”: 11: The Bacterial, Archaeal and Plant Plastid Code
+     
+     >>“JBrowse-in-Galaxy Action”: New JBrowse Instance
+      
+2. Set up different 3 tracks:
+     
+     >>'Track 1 - sequence reads: Click on Insert Track Group and fill it with.
+     
+     >> 'Track Category' to sequence reads
+     
+     >> ' Click on Insert Annotation Track' and fill it with
+     
+     >> “Track Type” to BAM Pileups
+     
+     >> “BAM Track Data” to snippy on data XX, data XX, and data XX mapped reads (bam)
+     
+     >> “Autogenerate SNP Track” to Yes
+     
+     >> “Track Visibility” to On for new users
+    
+ 
+     >>Track 2 - variants: Click on Insert Track Group and fill it with
+     
+     >>“Track Category” to variants
+     
+     >>Click on Insert Annotation Track and fill it with, “Track Type” to VCF SNPs, -“SNP Track Data” to TB Variant Filter on data XX and “Track Visibility” to On for new users  
+     
+     >>Track 3 - annotated reference: Click on Insert Track Group and fill it with “Track Category” to annotated reference.
+     >>
+     >>B-Click on Insert Annotation Track and fill it with
+     
+     >>1-“Track Type” to GFF/GFF3/BED Features
+     
+     >>“GFF/GFF3/BED Track Data” to https://zenodo.org/record/3531703/files/Mycobacterium_tuberculosis_h37rv.ASM19595v2.45.chromosome.Chromosome.gff3
+   
+     >>“JBrowse Track Type [Advanced]” to Canvas Features
+     
+     >>Click on “JBrowse Styling Options [Advanced]”
+     
+     >>“JBrowse style.label” to product
+     
+     >>“JBrowse style.description” to product
+     
+     >>“Track Visibility” to On for new users
+   
+3. **`Execute☑️`**
+4. A new dataset will be created in your history, containing the JBrowse interactive visualisation
+
+ 
 ## Different Samples, Different Stories (Optional)
 
 
