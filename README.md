@@ -201,7 +201,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 
 
-### BAM Coverage Plotter
+### *_BAM Coverage Plotter_*
 1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
 >> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
 
