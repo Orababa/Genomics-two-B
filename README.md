@@ -44,11 +44,22 @@ The data for the tutorial can be obtained using two methods;
      >> Close the upload window
 
 ## Quality Control
+This step serves to identify possible issues with the raw sequenced read input data before embarking on the “real” analysis steps
+Some of the typical problem, with NGS data can be mitigated by preprocessing affected sequencing reads before trying to map them to the reference genome. Detecting possible severe problems early may at least save you a lot of tone spent on analysing low quality data that is not worth the effort.
+Here is how we perform a standard quality check on our input data and only point out a few interesting aspect about that data.
 ### FastQC
+Search and select [FastQC 🔧⚙️] from tools list and fill in the details below
 
+“Short read data from your current history”: select both FASTQ datasets
+Ensure the top part where “short read data from your current history” is selected.
+Leave all other parameters at their default values and click Execute.
 
+The result should be four new datasets
 
-
+One with the calculated raw data
+and another with an HTML report of the findings for each input dataset.
+This will get added to your history.
+While one could examine the quality control report for each set of reads (forward and reverse) independently, it is quite useful to examine them side by side using the MultiQC TOOL
 ---
 ### [`MultiQC`](http://multiqc.info/) 
 
