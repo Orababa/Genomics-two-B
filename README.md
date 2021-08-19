@@ -46,9 +46,6 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
 
 
-
-
-
 ### [**_quality trimming_**]
 
 
@@ -114,6 +111,12 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 2. Choose the VCF files you wish to be filtered.
 3. **`Execute☑️`**
 4. Open the new VCF file.
+
+###  
+### ['Text transformation with sed'] 
+1. “File to process”: TB Variant Filter on data 21
+2. “SED Program”: s/GENE_//g 
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
 ### View Snippy Output in JBrowse 
 
@@ -181,6 +184,38 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 1.Fetch the data from EBI European Nucleotide Archive
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### BAM Coverage Plotter
+1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
+>> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
+
+>> "select the reference genome in fasta format" : (https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
+
+>> " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
+
+2. **`Execute☑️`** 
+
+3. Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a53e5694133aa9eb8/display?to_ext=png 
+
 
 
 
