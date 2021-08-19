@@ -244,4 +244,5 @@ Suliat Jimoh| @SuliJimoh|	Finding Variants Using Snippy
 Osmond Obinna| @Osmond|	Running Samtools on the BAM File
 Yomna Yasser| @YomnaElkaramany|	Running BAM Coverage Plotter on the BAM File
 
+
 ###### Each team member worked on a subtask in the analysis and updated the markdown.
