@@ -45,6 +45,23 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
 
+###Snippy(Finding variant using Snippy)
+1. Mycobacterium_tuberculosis_ancestral_reference.gbk dataset was used as the reference sequence”: 
+2.Paired was selected for the end reads
+3.first set of reads wa selected as Trimmomatic on X (R1 paired)
+4.Second set of reads was selected as Trimmomatic on X (R2 paired)
+![](https://res.cloudinary.com/adedotun/image/upload/v1629387169/samples/hackbio%20task/snippy_1_uynhgv.png)
+5.In the “Advanced parameters”, “Minimum proportion for variant evidence” was adjusted to 0.1, so we can see possible rare variants in the sample
+6.Under “Output selection”, “The final annotated variants in VCF format”, “A simple tab-separated summary of all the variants” and “The alignments in BAM format” were selected
+7. It was executed to show the following results
+The first variant on the list is a Substitution of a C to a T which is supported by 134 reads.
+![]()
+According to SnpEff, it’s a Synonymous change in Rv0002.
+
+1086 variants are found. To count variants, look at how many non-comment lines are in the snippy VCF output or hw many lines (excluding the header) there are in This is quite typical for M. tuberculosis
+
+
+
 ### [**_quality trimming_**]
 
 
@@ -97,12 +114,6 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 2. Choose the VCF files you wish to be filtered.
 3. **`Execute☑️`**
 4. Open the new VCF file.
-
-###  
-### ['Text transformation with sed'] 
-1. “File to process”: TB Variant Filter on data 21
-2. “SED Program”: s/GENE_//g 
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
 ### View Snippy Output in JBrowse 
 
