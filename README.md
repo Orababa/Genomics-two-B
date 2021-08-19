@@ -32,7 +32,7 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 ---
 ### [`MultiQC`](http://multiqc.info/) 
 
-1. Search and select **`MultiQC- 🛠️`** from the tools list and fill in the details as below.
+1. Search and select **`MultiQC- 🛠️`** from the tools list and fill in the details as below
 
      >Results
 
