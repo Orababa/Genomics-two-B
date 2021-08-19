@@ -26,6 +26,8 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 ### FastQC
 
 
+
+
 ---
 ### [`MultiQC`](http://multiqc.info/) 
 
@@ -42,6 +44,38 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 2. Keep the rest parameters unchanged
 3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
+
+### [**_quality trimming_**]
+
+
+### ['quality trimming'] (to clean up the reads and remove the poor quality sections)
+
+1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
+ 
+   >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
+   
+   >>“Input FASTQ file (R1/first of pair)”: 004-2_1.fastq.gz
+   
+   >>“Input FASTQ file (R2/second of pair)”: 004-2_2.fastq.gz
+   
+   >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
+   
+2. “+Insert Trimmomatic Operation”:
+   >> “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
+   >> “Minimum length of reads to be kept”: 20
+  
+3. **`Execute☑️`**
+4. A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a2a0e9f4987bf4808/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a0c5fe35823cc6abc/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
+>> https://usegalaxy.eu/datasets/11ac94870d0bb33ae46b0f83bf78d1b5/display?to_ext=fastqsanger.gz
+
+5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+
+
+
+   
 
 -----
 
@@ -126,49 +160,6 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
  
 ## Different Samples, Different Stories (Optional)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### [`Run samtools stat` to generate statistics for BAM dataset]
-
-1. On the tools sections, Search and select `samtools stat 🛠️`
-2. Fill with the following details;
-   >BAM File
-   >> Ensure the mapped reads (bam) file of the snippy output is selected.
-
-3. Keep the rest parameters unchanged.
-
-4. Then `Execute`☑️
-
-5. View the output, paying attention to the sequences, reads mapped and reads unmapped results.
-
 
 
 
