@@ -47,7 +47,12 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
 
 
+
 ### [**_quality trimming_**] (to clean up the reads and remove the poor quality sections)
+
+
+### [**_quality trimming_**]
+ (to clean up the reads and remove the poor quality sections)
 
 
 1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
