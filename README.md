@@ -117,6 +117,10 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 2. “SED Program”: s/GENE_//g 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
+### ['TB variant report']
+1. “Input SnpEff annotated M.tuberculosis VCF(s)”: Text transformation on data 21
+2. “TBProfiler Drug Resistance Report (Optional)”: TB-Profiler Profile on data 21: Results.json
+
 ### View Snippy Output in JBrowse 
 
 ### [`JBrowse`]
