@@ -204,7 +204,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 1. **`TB-Profiler profile 🔧⚙️`**
 - search and select `TB-Profiler profile 🔧⚙️` from search tools
 - Input file type: select "BAM"
-- The file to work on: _snippy on data 16, data 15, and data 3 mapped reads (bam)_
+- The file to work on: _snippy on data XX, data XX, and data XX mapped reads (bam)_
 - Click on **`Execute☑️`**
 
 * TB Profiler produces 3 output files
@@ -280,10 +280,9 @@ A southern African M. tuberculosis sample (sample 18-1) from the same study in Z
 * click on upload data
 * choose paste/fetch data
 * paste your URLs into the text box
-#####
->https://zenodo.org/record/3960260/files/018-1_1.fastq.gz
->
->https://zenodo.org/record/3960260/files/018-1_2.fastq.gz
+
+##### https://zenodo.org/record/3960260/files/018-1_1.fastq.gz
+##### https://zenodo.org/record/3960260/files/018-1_2.fastq.gz
 * click on `start`, and then `close`
 
 
@@ -320,7 +319,7 @@ The next example is SRR12416842 from an Indonesia study of multi-drug resistant 
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
 
-2. Examine the sequence quality with FastQC
+2. Examine the sequence quality with `FastQC🔧⚙️`
 
 * In the tools list search for **FastQC** and select it
 
@@ -337,18 +336,18 @@ Four new files will be added to your history. The result for each datasets will 
 ![seq quality](https://user-images.githubusercontent.com/88459905/130209416-e192b6c9-ba9e-443e-9af5-77dc9348d94e.PNG)
 ![fs st](https://user-images.githubusercontent.com/88459905/130209463-bc7c5db1-3109-4890-b328-67eda2793be2.PNG)
 
-3. Perform quality trimming with Trimmomatic
+3. Perform quality trimming with  `Trimmomatic🔧⚙️`
 
 
 * search and select **'Trimmomatic'** from the tools list and fill in the details as below
  
   * “Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
    
-  * “Input FASTQ file (R1/first of pair)”:  SRR12416842_1.fastq.gz
+  * “Input FASTQ file (R1/first of pair)”: select `SRR12416842_1.fastq.gz`
    
-  * “Input FASTQ file (R2/second of pair)”:  SRR12416842_2.fastq.gz
+  * “Input FASTQ file (R2/second of pair)”: select `SRR12416842_2.fastq.gz`
    
-  * “Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
+  * “Select Trimmomatic operation to perform“ : Keep the default value of **Sliding window trimming** and adjust the average quality required to 30
    
 * “+Insert Trimmomatic Operation”:
   * “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
@@ -362,89 +361,67 @@ A new 4 dataset will be created in the history, containing the 4 trimommatic dat
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33ae46b0f83bf78d1b5/display?to_ext=fastqsanger.gz
 
-5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+4. Map the samples to the M. tuberculosis reference genome with Snippy 
+Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
-### Mapping the samples to the **_M. tuberculosis_** reference genome 
- Mapping the samples to the **_M. tuberculosis_** reference genome using snippy tool to find variants
-1. Sarch and select **'Snippy'** from the tools list and fill in the details as below
+ 
+Mapping the samples to the **_M. tuberculosis_** reference genome using snippy tool to find variants
+1. search and select **'Snippy'** from the tools list and fill in the details as below:
 
+* “Will you select a reference genome from your history or use a built-in index?”: Use a genome from history and build index
+* “Use the following dataset as the reference sequence”: Mycobacterium_tuberculosis_ancestral_reference.gbk
+* “Single or Paired-end reads”: Paired
+* “Select first set of reads”: Trimmomatic on SRR12416842_1.fastq.gz(R1 paired)
+* “Select second set of reads”: Trimmomatic on SRR12416842_2.fastq.gz (R2 paired)
+* Under “Advanced parameters”
+  * “Minimum proportion for variant evidence”: 0.1 (This is so we can see possible rare variants in our sample)
+*Under “Output selection” select only the following:
+  * “The final annotated variants in VCF format”
 
->>“Will you select a reference genome from your history or use a built-in index?”: Use a genome from history and build index
+  * “A simple tab-separated summary of all the variants”
 
->>“Use the following dataset as the reference sequence”: Mycobacterium_tuberculosis_ancestral_reference.gbk
+  * “The alignments in BAM format”.
 
->>“Single or Paired-end reads”: Paired
-
->>“Select first set of reads”: Trimmomatic on SRR12416842_1.fastq.gz(R1 paired)
-
->>“Select second set of reads”: Trimmomatic on SRR12416842_2.fastq.gz (R2 paired)
-
-2. Under “Advanced parameters”
-
->>“Minimum proportion for variant evidence”: 0.1 (This is so we can see possible rare variants in our sample)
-
-3. Under “Output selection” select only the following:
->>“The final annotated variants in VCF format”
-
->>“A simple tab-separated summary of all the variants”
-
->>“The alignments in BAM format”.
-
-Then
-**`Execute☑️`**
+* finally, select **`Execute☑️`**
 
 ![optional task 2-1](https://user-images.githubusercontent.com/88276401/130168756-3d462195-b7a4-41bb-a653-dea4852fec79.PNG)
 
 ![optional task 2-2](https://user-images.githubusercontent.com/88276401/130168775-c2f28073-6b1f-49f0-89a0-e14297992b58.PNG)
 
- A new 3 dataset will be created in the history, a vcf file, snps table and a mapped reads file in bam format
+A new 3 dataset will be created in the history, a vcf file, snps table and a mapped reads file in bam format.
 
 Inspect the Snippy VCF output to check the number of variant discovered by **'Snippy'** on 👁️ button on the file
 
 
-### Samtools Stats
+5. Run samtools stats
 
+* On the tools sections, search and select `samtools stat 🔧⚙️`
+* Fill with the following details:
+   + BAM File
+   + Ensure the mapped reads (bam) file of the snippy output is selected.
 
-### [`Run samtools stat` to generate statistics for BAM dataset]
+* Keep the rest parameters unchanged.
 
-1. On the tools sections, Search and select `samtools stat 🛠️`
-2. Fill with the following details;
-   >BAM File
-   >> Ensure the mapped reads (bam) file of the snippy output is selected.
+* Then `Execute`☑️
 
-3. Keep the rest parameters unchanged.
-
-4. Then `Execute`☑️
-
-5. View the output, paying attention to the sequences, reads mapped and reads unmapped results.
+* View the output and pay attention to the sequences, reads mapped and reads unmapped results.
 
 
 
+6. Run the `BAM Coverage Plotter 🔧⚙️` tool on the mapped reads BAM file that you got from snippy.
 
-### *_BAM Coverage Plotter_*
-1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
->> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
+* search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below:
+* "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta format 
 
->> "select the reference genome in fasta format" : (https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
+  * "select the reference genome in fasta format" : (https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
+ 
+  * " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
 
->> " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
+* **`Execute☑️`*
 
-2. **`Execute☑️`*
-
-3. Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+* Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a53e5694133aa9eb8/display?to_ext=png 
-
-
-
-
-
-
-
-
-
-
-
 
 
 
