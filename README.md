@@ -83,14 +83,16 @@ While one could indepedently examine the quality control report for each set of 
 
      - In *Results*
      
-       * `Which tool was used generate logs?`: **FastQC**
+       * `Which tool was used to generate logs?`: **FastQC**
        * In FastQC output
       
          * `Type of FastQC output?` **Raw data**
          * Output of BAMtools` **_FastQC on data: RawData_** (Select both RawData files)
+         ![Input_details](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_1.png)
 2. Keep the remaining parameters unchanged
 3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
+     ![Output_file](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_2.png)
 
 
 
