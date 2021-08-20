@@ -253,8 +253,8 @@ Snippy prepends GENE_ to gene names in the VCF annotation, when it is run with G
 3. Examine the sample composition with  **`Kraken2 🔧⚙️`** by following the steps below:
 * search and select **`Kraken2 🔧⚙️`** from the tools list.
   * "Single or paired reads": `Paired`
-  * "Forward strand": `.fastq.gz`
-  * "Reverse strand": `.fastq.gz`
+  * "Forward strand": `018-1_1.fastq.gz`
+  * "Reverse strand": `018-1_2.fastq.gz`
 * "Print scientific names instead of taxids": `Yes`
 * "Enable quick operation": `Yes`
 * under "Create report":
