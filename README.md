@@ -277,6 +277,8 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
    * click on upload data
    * choosw paste/fetch data
    * paste your URLs
+      # https://zenodo.org/record/3960260/files/018-1_1.fastq.gz
+      # https://zenodo.org/record/3960260/files/018-1_2.fastq.gz
    * click on colse
    
 2.	check for data quality using fastQC
