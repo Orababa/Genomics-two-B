@@ -157,7 +157,8 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 # The file to work on: 
    ## _snippy on data 16, data 15, and data 3 mapped reads (bam)_
 - Click on Execute
-# TB Profiler produces 3 output files, it’s own VCF file, a report about the sample including it’s likely lineages and any AMR found. There is also a [.json](https://.json.org) formatted results file.
+
+TB Profiler produces 3 output files, it’s own VCF file, a report about the sample including it’s likely lineages and any AMR found. There is also a [.json](https://.json.org) formatted results file.
 
 
 ### ['Text transformation with sed'] 
