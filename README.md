@@ -10,24 +10,56 @@
 - [Introduction](#introduction)
 - [Get Your Data](#get-your-data)
 - [Quality Control](#quality-control)
-- [Look For Contamination with Kraken2 (Optional)](#look-for-contamination-with-kraken2--optional-)
+- [Look For Contamination with Kraken2 (Optional)](#look-for-contamination-with-kraken2-optional)
 - [Find Variants with Snippy](#find-variants-with-snippy)
 - [Further Variant Filtering and TB-Profiling](#further-variant-filtering-and-tb-profiling)
 - [View Snippy Output in JBrowse](#view-snippy-output-in-jbrowse)
-- [Different Samples, Different Stories (Optional)](#different-samples--different-stories--optional-)
+- [Different Samples, Different Stories (Optional)](#different-samples-different-stories-optional)
 
 Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Introduction
 
+Mycobacterium tuberculosis is a Gram-positive rod-shaped bacterium that is known to cause tuberculosis. Tuberculosis (TB) is one of the world’s most dangerous infectious diseases and contributes to about two million annual deaths globally. Mutational changes in the genome of M. tuberculosis strains is one of the major contributing factors to its multidrug resistance nature and increased virulence. The genomics-two-B team recreated a galaxy tutorial on M. tuberculosis bacterium variant calling which aims at checking singe nucleotide polymorphism (SNP) in the DNA sequence of M. tuberculosis strains by comparing to an ancestral genome. This markdown contains the comprehensive step-wise procedure carried out during the recreation of the tutorial.
 
 ## Get Your Data
 
+The data for the tutorial can be obtained using two methods;
+1. By pasting the zenodo link to the data library on galaxy upload manager through the paste/fetch option.
+     
+     >> copy the zenodo link
+     
+     >> open the galaxy upload manager and select the fetch/paste option
+     
+     >> Click on the start option and close the upload window
+     
+2. By uploading the downloaded dataset from one's computer library
+     
+     >> Click on the galaxy upload manager
+     
+     >> Navigate to the choose from local file option
+     
+     >> Select the files to be uploaded and click on start
+     
+     >> Close the upload window
+
 ## Quality Control
+This step serves to identify possible issues with the raw sequenced read input data before embarking on the “real” analysis steps
+Some of the typical problem, with NGS data can be mitigated by preprocessing affected sequencing reads before trying to map them to the reference genome. Detecting possible severe problems early may at least save you a lot of tone spent on analysing low quality data that is not worth the effort.
+Here is how we perform a standard quality check on our input data and only point out a few interesting aspect about that data.
 ### FastQC
+Search and select [FastQC 🔧⚙️] from tools list and fill in the details below
 
+>“Short read data from your current history”: select both FASTQ datasets
+>Ensure the top part where “short read data from your current history” is selected.
+>Leave all other parameters at their default values and click Execute.
 
+The result should be four new datasets
 
+One with the calculated raw data
+and another with an HTML report of the findings for each input dataset.
+This will get added to your history.
+While one could examine the quality control report for each set of reads (forward and reverse) independently, it is quite useful to examine them side by side using the MultiQC TOOL
 
 ---
 ### [`MultiQC`](http://multiqc.info/) 
@@ -61,7 +93,13 @@ Reference : <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>T
 
 ## Look For Contamination with Kraken2 (Optional)
 
-
+Looking for contamination in our reads is essential to producing a good work, as other sources of DNA accidentally or inadvertantly get mixed in with our sample and this can  confound our snp analysis. Kraken 2 is an effective way of looking at which species is represented in our reads and so we can easily spot possible contamination of our sample. 
+The already trimmed sequences were used in the kraken analysis highlighting both the 
+-Forward Stand and the Reverse strand
+![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442271/HACKBIO/Screenshot_19_t6vvut.png)
+A report of the analysis was produced later on; 
+![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442272/HACKBIO/Screenshot_20_aly0hu.png)
+From the report generated; it was infered that about 91% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
 ## Find Variants with Snippy
 ###Snippy(Finding variant using Snippy)
 1. Mycobacterium_tuberculosis_ancestral_reference.gbk dataset was used as the reference sequence”: 
@@ -161,6 +199,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 3. **`Execute☑️`**
 4. A new dataset will be created in your history, containing the JBrowse interactive visualisation
 
+
  
 ## Different Samples,Different Stories (Optional)
 ### feach data and introduction
@@ -179,6 +218,10 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
 
 
+## Different Samples, Different Stories (Optional)
+
+
+### A. Hands-on: Take a closer look at sample 18-1
 
 
 
@@ -189,7 +232,25 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 
 
-### quality trimming
+
+
+
+### B. Hands-on: Take a closer look at sample SRR12416842
+
+Illumina HiSeq 2500 paired end sequencing; Whole genome sequencing analysis of multi-drug resistant Mycobacterium tuberculosis from Java, Indonesia SAMPLE
+
+### Fetch data 
+1.Fetch the data from EBI European Nucleotide Archive
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
+
+
+
+### FastQC
+
+
+
+### Quality trimming
  (to clean up the reads and remove the poor quality sections)
 
 
@@ -217,9 +278,45 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 5.  Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
 
+### Mapping the samples to the **_M. tuberculosis_** reference genome 
+ Mapping the samples to the **_M. tuberculosis_** reference genome using snippy tool to find variants
+1. Sarch and select **'Snippy'** from the tools list and fill in the details as below
 
 
+>>“Will you select a reference genome from your history or use a built-in index?”: Use a genome from history and build index
 
+>>“Use the following dataset as the reference sequence”: Mycobacterium_tuberculosis_ancestral_reference.gbk
+
+>>“Single or Paired-end reads”: Paired
+
+>>“Select first set of reads”: Trimmomatic on SRR12416842_1.fastq.gz(R1 paired)
+
+>>“Select second set of reads”: Trimmomatic on SRR12416842_2.fastq.gz (R2 paired)
+
+2. Under “Advanced parameters”
+
+>>“Minimum proportion for variant evidence”: 0.1 (This is so we can see possible rare variants in our sample)
+
+3. Under “Output selection” select only the following:
+>>“The final annotated variants in VCF format”
+
+>>“A simple tab-separated summary of all the variants”
+
+>>“The alignments in BAM format”.
+
+Then
+**`Execute☑️`**
+
+![optional task 2-1](https://user-images.githubusercontent.com/88276401/130168756-3d462195-b7a4-41bb-a653-dea4852fec79.PNG)
+
+![optional task 2-2](https://user-images.githubusercontent.com/88276401/130168775-c2f28073-6b1f-49f0-89a0-e14297992b58.PNG)
+
+ A new 3 dataset will be created in the history, a vcf file, snps table and a mapped reads file in bam format
+
+Inspect the Snippy VCF output to check the number of variant discovered by **'Snippy'** on 👁️ button on the file
+
+
+### Samtools Stats
 
 
 ### [`Run samtools stat` to generate statistics for BAM dataset]
@@ -241,13 +338,13 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 
 
-### *_BAM Coverage Plotter_*
+### BAM Coverage Plotter
 1. search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below
 >> "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta formate 
 
->> "select the reference genome in fasta format" : (https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
+>> "select the reference genome in fasta format" :(https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
 
->> " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
+>> " select the BAM file that you got from snippy. " :(https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
 
 2. **`Execute☑️`*
 
