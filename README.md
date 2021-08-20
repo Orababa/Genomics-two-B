@@ -295,7 +295,7 @@ The FastQC tool input form is shown below. Attention should be paid to only the 
 
 
 * four new datasets (one with the calculated raw data and another with an html report of the findings for each input dataset) will get added to the history
-* form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
+* from the report, we got that the data needs to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
 
 
 3. **Examine the sample composition with  `Kraken2 🔧⚙️`** (by @Mosopefoluwa) 
@@ -314,7 +314,7 @@ follow the steps below:
 * **`Execute☑️`**
 
 ####
-Only 55.58% of the sequence reads are associated with the genus Mycobacterium. This poor classification may be due to quality problems in the sequence reads. They definitely will make variant calling less reliable.
+Only 55.58% of the sequence reads are associated with the genus Mycobacterium. This poor classification may be due to quality problems in the sequence reads. These problems will definitely make variant calling less reliable.
 
 -----
 
@@ -338,7 +338,7 @@ The next example is SRR12416842 from an Indonesia study of multi-drug resistant 
 
 * click execute
 
-Four new files will be added to your history. The result for each datasets will be a HTML report (the webpage file) and the rawData file. 
+Four new files will be added to your history. The result for each dataset will be a HTML report (the webpage file) and the rawData file. 
 
 
 3. **Perform quality trimming with  `Trimmomatic🔧⚙️`** (by @Omnia)
@@ -360,7 +360,7 @@ Four new files will be added to your history. The result for each datasets will 
   
 * **`Execute☑️`**
 
-4 new dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired).
+4 new datasets will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired).
 
 Inspect the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
