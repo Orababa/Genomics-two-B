@@ -195,6 +195,10 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
  
 ## Different Samples,Different Stories (Optional)
+
+## introduction 
+Illumina HiSeq 2500 paired end sequencing; Whole genome sequencing analysis of multi-drug resistant Mycobacterium tuberculosis from Java, Indonesia
+
 ### feach data and introduction
 1.Fetch the data from EBI European Nucleotide Archive
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
