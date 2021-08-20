@@ -100,17 +100,25 @@ The already trimmed sequences were used in the kraken analysis highlighting both
 A report of the analysis was produced later on; 
 ![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442272/HACKBIO/Screenshot_20_aly0hu.png)
 From the report generated; it was infered that about 91% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
+
+
 ## Find Variants with Snippy
 ###Snippy(Finding variant using Snippy)
 1. Mycobacterium_tuberculosis_ancestral_reference.gbk dataset was used as the reference sequence”: 
+
 2.Paired was selected for the end reads
+
 3.first set of reads wa selected as Trimmomatic on X (R1 paired)
+
 4.Second set of reads was selected as Trimmomatic on X (R2 paired)
 ![](https://res.cloudinary.com/adedotun/image/upload/v1629387169/samples/hackbio%20task/snippy_1_uynhgv.png)
+
 5.In the “Advanced parameters”, “Minimum proportion for variant evidence” was adjusted to 0.1, so we can see possible rare variants in the sample
 ![](https://res.cloudinary.com/adedotun/image/upload/v1629387173/samples/hackbio%20task/snippy_2_cjs4h1.png)
+
 6.Under “Output selection”, “The final annotated variants in VCF format”, “A simple tab-separated summary of all the variants” and “The alignments in BAM format” were selected
-7. It was executed to show the following results
+
+7. It was executed to show one of the following results
 In a total of 1086 variants the first variant on the list is a Substitution of a C to a T which is supported by 134 reads.
 ![](https://res.cloudinary.com/adedotun/image/upload/v1629387184/samples/hackbio%20task/snippy_C-T_l0xyp7.png)
 
@@ -399,7 +407,7 @@ Adeniran Fadekemi| @Morenike| Quality Control of Input Dataset Using FastQC
 Suchitra Thapa| @Suchitraa| Combining QC Results Using MultiQC
 Michael Olufemi| @Micholufemi| Quality Trimming Using Trimmomatic
 Adedoyin Adesoye| @Adedoyinsoye| Search for Contamination Using Kraken2
-Adedotun Sobambo| @AdunniEagle| Finding Variants Using Snippy
+Sobambo Adedotun| @AdunniEagle| Finding Variants Using Snippy
 Ahmed Sameh| @Ahhmedsamehh| Filtering TB Variant	
 Neemah Jinadu| @Neemahj| TB profiling Using TB Profiler Profile
 Camilia Mohamed Kamal| @CamiliaKamal2|	Text Transformation with sed
