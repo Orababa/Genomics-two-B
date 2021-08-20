@@ -5,11 +5,11 @@
 - [Introduction](#introduction)
 - [Get Your Data](#get-your-data)
 - [Quality Control](#quality-control)
-- [Look For Contamination with Kraken2 (Optional)](#look-for-contamination-with-kraken2--optional-)
+- [Look For Contamination with Kraken2 (Optional)](#look-for-contamination-with-kraken2-optional)
 - [Find Variants with Snippy](#find-variants-with-snippy)
 - [Further Variant Filtering and TB-Profiling](#further-variant-filtering-and-tb-profiling)
 - [View Snippy Output in JBrowse](#view-snippy-output-in-jbrowse)
-- [Different Samples, Different Stories (Optional)](#different-samples--different-stories--optional-)
+- [Different Samples, Different Stories (Optional)](#different-samples--different-stories-optional)
 
 Reference: <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -81,19 +81,19 @@ While one could indepedently examine the quality control report for each set of 
 
 1. Search and select **`MultiQC 🔧⚙️`** from the tools list and fill in the details as below
 
-     - In *Results*
+     - In Results
      
        * `Which tool was used to generate logs?`: **FastQC**
        * In FastQC output
       
          * `Type of FastQC output?` **Raw data**
-         * Output of BAMtools` **_FastQC on data: RawData_** (Select both RawData files)
+         * `Output of BAMtools` **_FastQC on data: RawData_** (Select both RawData files)
          ![Input_details](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_1.png)
 2. Keep the remaining parameters unchanged
 3. Then **`Execute☑️`**
-4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file
+4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file.
      ![Output_file](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_2.png)
-
+5. Look out for quality scores (phred scores, mean score), duplication level and adpator content then, decide the quality is sufficient for analysis or not.
 
 
 ### Quality Trimming
