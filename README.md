@@ -169,18 +169,19 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 ### Run TB Profiler and TB Variant Report
 
-1. `**TB-Profiler profile 🔧⚙️**`
+1. **`TB-Profiler profile 🔧⚙️`**
 
 
 
 Snippy prepends GENE_ to gene names in the VCF annotation, when it is run with Genbank format input. This causes a problem for TB Variant report, hence, there is need to edit the output with sed.
-2. `**Text transformation with sed 🔧⚙️**`
+
+2. **`Text transformation with sed 🔧⚙️`**
 * “File to process”: TB Variant Filter on data XX
 * “SED Program”: s/GENE_//g 
 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
-3. `**TB Variant Report 🔧⚙️**`
+3. **`TB Variant Report 🔧⚙️`**
 * “Input SnpEff annotated M.tuberculosis VCF(s)”: Text transformation on data XX
 * “TBProfiler Drug Resistance Report (Optional)”: TB-Profiler Profile on data XX: Results.json
 
@@ -249,8 +250,8 @@ Snippy prepends GENE_ to gene names in the VCF annotation, when it is run with G
  
 ## Different Samples,Different Stories (Optional)
 
-3. Examine the sample composition with  `**Kraken2 🔧⚙️**` by following the steps below:
-* search and select `**Kraken2 🔧⚙️**` from the tools list.
+3. Examine the sample composition with  **`Kraken2 🔧⚙️`** by following the steps below:
+* search and select **`Kraken2 🔧⚙️`** from the tools list.
   * "Single or paired reads": `Paired`
   * "Forward strand": `.fastq.gz`
   * "Reverse strand": `.fastq.gz`
