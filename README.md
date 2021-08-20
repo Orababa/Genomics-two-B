@@ -92,7 +92,6 @@ While one could indepedently examine the quality control report for each set of 
 2. Keep the remaining parameters unchanged
 3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file.
-     ![Output_file](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_2.png)
 5. Look out for quality scores (phred scores, mean score), duplication level and adpator content then, decide the quality is sufficient for analysis or not.
 
 
@@ -108,6 +107,7 @@ While one could indepedently examine the quality control report for each set of 
 * select “+Insert Trimmomatic Operation”
   * click on “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
   * “Minimum length of reads to be kept”: 20
+  
 click on **`Execute☑️`**
 
 2. finally, check the output produced by Trimmomatic
@@ -219,7 +219,6 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 * “File to process”: TB Variant Filter on data XX
 * “SED Program”: s/GENE_//g 
 
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
 3. **`TB Variant Report 🔧⚙️`** (by @christina)
 * “Input SnpEff annotated M.tuberculosis VCF(s)”: Text transformation on data XX
@@ -313,6 +312,9 @@ follow the steps below:
   * “Print a report with aggregrate counts/clade to file”: select `Yes`
 * Select a Kraken2 database: Standard
 * **`Execute☑️`**
+
+####
+Only 55.58% of the sequence reads are associated with the genus Mycobacterium. This poor classification may be due to quality problems in the sequence reads. They definitely will make variant calling less reliable.
 
 -----
 
