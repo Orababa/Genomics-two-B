@@ -272,17 +272,24 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
  
 ## Different Samples,Different Stories (Optional)
 
-1.	check for data quality using fastQC
-2.	  { to find out the quality report} 
-3.	1. Select from options at the left Fasta/Fastq 
-4.	2. Choose FastQC to read quality report **FastQC**
-5.	3. Choose your data set 
-6.	>> insert multiple files, and choose the previously uploaded files
-7.	>> follow default parameters 
-8.	4. press **execute**
-9.	5. Four files will be created composed of two html page for the quality report 
-10.	6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
-11.	
+1. Fetch the data from Zenodo:
+   * choose Optional task 1 history
+   * click on upload data
+   * choosw paste/fetch data
+   * paste your URLs
+   * click on colse
+   
+2.	check for data quality using fastQC
+3.	  { to find out the quality report} 
+4.	1. Select from options at the left Fasta/Fastq 
+5.	2. Choose FastQC to read quality report **FastQC**
+6.	3. Choose your data set 
+7.	>> insert multiple files, and choose the previously uploaded files
+8.	>> follow default parameters 
+9.	4. press **execute**
+10.	5. Four files will be created composed of two html page for the quality report 
+11.	6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
+	
 
 3. Examine the sample composition with  **`Kraken2 🔧⚙️`** by following the steps below:
 * search and select **`Kraken2 🔧⚙️`** from the tools list.
