@@ -80,7 +80,19 @@ While one could examine the quality control report for each set of reads (forwar
 
 
 
-### [**_quality trimming_**] (to clean up the reads and remove the poor quality sections)
+### [**_quality trimming_**] 
+1. Search and select Trimmomatic from the search tools. The process is as shown below:
+
+“Single-end or paired-end reads?”: Paired End (two separate input files)
+param-files “Input FASTQ file (R1/first of pair)”: 004-2_1.fastq.gz
+param-files “Input FASTQ file (R2/second of pair)”: 004-2_2.fastq.gz
+Select Trimmomatic operation to perform
+Keep the default value of Sliding window trimming and adjust the average quality required to 30
+“+Insert Trimmomatic Operation”
+“Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
+“Minimum length of reads to be kept”: 20
+Click on Execute
+Inspect the output produced by Trimmomatic
 
 
 
