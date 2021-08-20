@@ -282,6 +282,10 @@ To find out the quality report and to ensure that the raw data looks good and th
 Four new files will be added to your History.
 The result for each datasets will be a HTML report (the webpage file) and the rawData file. 
 
+![seq quality](https://user-images.githubusercontent.com/88459905/130209416-e192b6c9-ba9e-443e-9af5-77dc9348d94e.PNG)
+![fs st](https://user-images.githubusercontent.com/88459905/130209463-bc7c5db1-3109-4890-b328-67eda2793be2.PNG)
+
+
 
 ### Quality trimming
  (to clean up the reads and remove the poor quality sections)
