@@ -13,14 +13,14 @@
 
 Reference: <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-## Introduction 
-*Mycobacterium tuberculosis* is a Gram-positive rod-shaped bacterium that is known to cause tuberculosis. Tuberculosis (TB) is one of the world’s most dangerous infectious diseases and contributes to about two million annual deaths globally. Mutational changes in the genome of M. tuberculosis strains is one of the major contributing factors to its multidrug resistance nature and increased virulence. 
+## Introduction (by @Toxhin)
+*Mycobacterium tuberculosis* is a Gram-positive rod-shaped bacterium that is known to cause tuberculosis. Tuberculosis (TB) is one of the world’s most dangerous infectious diseases and contributes to about 1.4 million annual deaths globally. Mutational changes in the genome of M. tuberculosis strains is one of the major contributing factors to its multidrug resistance nature and increased virulence. 
 
 The genomics-two-B team recreated a galaxy tutorial on M. tuberculosis bacterium variant analysis which aims at identifying the variants, filtering the variants,predicting drug resistance from the identified variants and annotating the variants. This markdown contains the comprehensive step-wise procedure carried out during the recreation of the tutorial.
 
 -----
 
-## Get Your Data
+## Get Your Data (by @Toxhin)
 
 The data used in the tutorial can be obtained using two methods:
 1. By importing the files from Zenodo.
@@ -58,7 +58,7 @@ Some of the typical problems with NGS data can be reduced by pre-processing affe
 
 Here is how we performed a standard quality check on our input data.
 
-### Quality Control of the Input Datasets
+### Quality Control of the Input Datasets (by @Morenike) 
 Search and select `FastQC 🔧⚙️` from tools list and fill in the details below:
 
 + “Short read data from your current history”: select both FASTQ datasets
@@ -77,7 +77,7 @@ These will get added to your history.
 
 While one could indepedently examine the quality control report for each set of reads (forward and reverse), it is quite useful to examine them side by side using the **MultiQC TOOL**
 
-### Combining QC results
+### Combining QC results (by @Suchitraa)
 
 1. Search and select **`MultiQC 🔧⚙️`** from the tools list and fill in the details as below
 
@@ -96,7 +96,7 @@ While one could indepedently examine the quality control report for each set of 
 5. Look out for quality scores (phred scores, mean score), duplication level and adpator content then, decide the quality is sufficient for analysis or not.
 
 
-### Quality Trimming
+### Quality Trimming (by @Micholufemi)
 
 1. Search and select `Trimmomatic 🔧⚙️` from the search tools, to clean up the reads and remove the poor quality sections. The process is as shown below:
 
@@ -119,7 +119,7 @@ Looking for contamination in our reads is essential to producing a good work, as
 
 Kraken 2 is an effective way of looking at which species is represented in our reads and so we can easily spot possible contamination of our sample. 
 
-### Run Kraken2
+### Run Kraken2 (by @Adedoyinsoye)
 
 1. search and select `Kraken2 🔧⚙️` from the search tools. The steps  are shown below:
  
@@ -140,7 +140,7 @@ A report of the analysis was produced later on:
  
 ![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442272/HACKBIO/Screenshot_20_aly0hu.png)
 
-From the report generated; it was inferred that about 91% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
+From the report generated; it was inferred that about 94.02% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
 
 -----
 
@@ -152,7 +152,7 @@ If Snippy is given an annotated reference in Genbank format (.gbk), it will run 
 
 An annotated reference built from the inferred M. tuberculosis ancestral reference genome and the gene annotation from the H37Rv strain are available and will be used in this case.
 
-### Run Snippy
+### Run Snippy (by @AdunniEagle)
 
 
 1. select the reference genome "from history and build index"
@@ -188,7 +188,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 ## Further Variant Filtering and TB-Profiling
 
-### Run Snippy
+### Run Snippy (by @Ahhmedsamehh)
 
 1. search and select **`TB Variant Filter 🔧⚙️`** from the tools list and adjust parameters as below:
 
@@ -201,7 +201,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 ### Run TB Profiler and TB Variant Report
 
-1. **`TB-Profiler profile 🔧⚙️`**
+1. **`TB-Profiler profile 🔧⚙️`** (by @Neemahj)
 - search and select `TB-Profiler profile 🔧⚙️` from search tools
 - Input file type: select "BAM"
 - The file to work on: _snippy on data XX, data XX, and data XX mapped reads (bam)_
@@ -215,13 +215,13 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 2. Snippy prepends GENE_ to gene names in the VCF annotation, when it is run with Genbank format input. This causes a problem for TB Variant report, hence, there is need to edit the output with sed.
 
-**`Text transformation with sed 🔧⚙️`**
+**`Text transformation with sed 🔧⚙️`** (by @CamiliaKamal2)
 * “File to process”: TB Variant Filter on data XX
 * “SED Program”: s/GENE_//g 
 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a2ea3b318a7a7d7be/display?to_ext=vcf 
 
-3. **`TB Variant Report 🔧⚙️`**
+3. **`TB Variant Report 🔧⚙️`** (by @christina)
 * “Input SnpEff annotated M.tuberculosis VCF(s)”: Text transformation on data XX
 * “TBProfiler Drug Resistance Report (Optional)”: TB-Profiler Profile on data XX: Results.json
 
@@ -229,7 +229,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 
 ## View Snippy Output in JBrowse 
 
-### Run JBrowse
+### Run JBrowse (by @Engy)
 
 1.	search and select **JBrowse 🔧⚙️`** from the tools list and adjust parameters as below.
   * “Reference genome to display”: Use a genome from history
@@ -269,6 +269,7 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 3. **`Execute☑️`**
 4. A new dataset will be created in your history, containing the JBrowse interactive visualisation
 
+-----
  
 ## Different Samples,Different Stories (Optional)
 
@@ -276,7 +277,7 @@ A southern African M. tuberculosis sample (sample 18-1) from the same study in Z
 
 ### Take a closer look at sample 18-1
 
-1. Fetch the data from Zenodo
+1. **Fetch the data from Zenodo** (by @HossamHatem)
 * click on upload data
 * choose paste/fetch data
 * paste your URLs into the text box
@@ -286,8 +287,8 @@ A southern African M. tuberculosis sample (sample 18-1) from the same study in Z
 * click on `start`, and then `close`
 
 
-
-2. Examine the sequence quality with `FastQC🔧⚙️`
+###
+2. **Examine the sequence quality with `FastQC🔧⚙️`** (by @Mennatullah)
 
 The FastQC tool input form is shown below. Attention should be paid to only the top part where Short read data from your current history is selected. Leave all the other parameters at their default values and click Execute.
 
@@ -297,7 +298,10 @@ The FastQC tool input form is shown below. Attention should be paid to only the 
 * four new datasets (one with the calculated raw data and another with an html report of the findings for each input dataset) will get added to the history
 * form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
 
-3. Examine the sample composition with  **`Kraken2 🔧⚙️`** by following the steps below:
+
+3. **Examine the sample composition with  `Kraken2 🔧⚙️`** (by @Mosopefoluwa) 
+
+follow the steps below:
 
 * search and select **`Kraken2 🔧⚙️`** from the tools list.
   * "Single or paired reads": select `Paired`
@@ -310,16 +314,17 @@ The FastQC tool input form is shown below. Attention should be paid to only the 
 * Select a Kraken2 database: Standard
 * **`Execute☑️`**
 
-
+-----
 
 The next example is SRR12416842 from an Indonesia study of multi-drug resistant (MDR) tuberculosis.
 
 ### Take a closer look at sample SRR12416842
-1.Fetch the data from EBI European Nucleotide Archive
+1. **Fetch the data from EBI European Nucleotide Archive** (by @Mustafa)
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
 
-2. Examine the sequence quality with `FastQC🔧⚙️`
+
+2. **Examine the sequence quality with `FastQC🔧⚙️`** (by @AmiraT)
 
 * In the tools list search for **FastQC** and select it
 
@@ -333,10 +338,8 @@ The next example is SRR12416842 from an Indonesia study of multi-drug resistant 
 
 Four new files will be added to your history. The result for each datasets will be a HTML report (the webpage file) and the rawData file. 
 
-![seq quality](https://user-images.githubusercontent.com/88459905/130209416-e192b6c9-ba9e-443e-9af5-77dc9348d94e.PNG)
-![fs st](https://user-images.githubusercontent.com/88459905/130209463-bc7c5db1-3109-4890-b328-67eda2793be2.PNG)
 
-3. Perform quality trimming with  `Trimmomatic🔧⚙️`
+3. **Perform quality trimming with  `Trimmomatic🔧⚙️`** (by @Omnia)
 
 
 * search and select **'Trimmomatic'** from the tools list and fill in the details as below
@@ -355,17 +358,13 @@ Four new files will be added to your history. The result for each datasets will 
   
 * **`Execute☑️`**
 
-A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a2a0e9f4987bf4808/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a0c5fe35823cc6abc/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
->> https://usegalaxy.eu/datasets/11ac94870d0bb33ae46b0f83bf78d1b5/display?to_ext=fastqsanger.gz
+4 new dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired).
 
-4. Map the samples to the M. tuberculosis reference genome with Snippy 
-Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+Inspect the output trimommatic results  webpage file by clicking on 👁️ button on the file
 
- 
-Mapping the samples to the **_M. tuberculosis_** reference genome using snippy tool to find variants
+4. **Map the samples to the M. tuberculosis reference genome with Snippy** (by @SuliJimoh)
+
+### 
 1. search and select **'Snippy'** from the tools list and fill in the details as below:
 
 * “Will you select a reference genome from your history or use a built-in index?”: Use a genome from history and build index
@@ -388,12 +387,13 @@ Mapping the samples to the **_M. tuberculosis_** reference genome using snippy t
 
 ![optional task 2-2](https://user-images.githubusercontent.com/88276401/130168775-c2f28073-6b1f-49f0-89a0-e14297992b58.PNG)
 
-A new 3 dataset will be created in the history, a vcf file, snps table and a mapped reads file in bam format.
-
-Inspect the Snippy VCF output to check the number of variant discovered by **'Snippy'** on 👁️ button on the file
+3 new datasets will be created in the history, a vcf file, snps table and a mapped reads file in bam format.
 
 
-5. Run samtools stats
+2. Inspect the Snippy VCF output to check the number of variant discovered by **'Snippy'** on 👁️ button on the file
+
+###
+5. **Run samtools stats** (by @Osmond)
 
 * On the tools sections, search and select `samtools stat 🔧⚙️`
 * Fill with the following details:
@@ -407,49 +407,59 @@ Inspect the Snippy VCF output to check the number of variant discovered by **'Sn
 * View the output and pay attention to the sequences, reads mapped and reads unmapped results.
 
 
-
-6. Run the `BAM Coverage Plotter 🔧⚙️` tool on the mapped reads BAM file that you got from snippy.
+###
+6. **Run the `BAM Coverage Plotter 🔧⚙️` tool on the mapped reads BAM file that you got from snippy** (by @YomnaElkaramany)
 
 * search and select **'BAM Coverage Plotter'** from the tools list and fill in the details as below:
 * "Will you select a reference genome from your history or use a built-in genome?" : use a genome from history in fasta format 
 
-  * "select the reference genome in fasta format" : (https://usegalaxy.eu/datasets/11ac94870d0bb33aca1bc094e2415e7e/display?to_ext=fasta)
+  * "select the reference genome in fasta format" : MTB_ancestor_reference.fasta
  
-  * " select the BAM file that you got from snippy. " : (https://usegalaxy.eu/datasets/11ac94870d0bb33a646435297267fb5a/display?to_ext=bam)
+  * " select the BAM file that you got from snippy. " : Snippy on data XX, data XX and data XX mapped reads (bam)
 
-* **`Execute☑️`*
+* **`Execute☑️`**
 
-* Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file
+* Observe the output trimommatic results  webpage file by clicking on 👁️ button on the file.
 
->> https://usegalaxy.eu/datasets/11ac94870d0bb33a53e5694133aa9eb8/display?to_ext=png 
+-----
 
+###
+The data (ouput) from the analysis performed in this tutorial can be found in the histories below, which have been made acccesible.
 
+* https://usegalaxy.eu/u/genomicstwob/h/mtb-variant-calling-genomicstwob-sample-004-2
+* https://usegalaxy.eu/u/genomicstwob/h/mtb-variant-calling-genomicstwob-sample-18-1
+* https://usegalaxy.eu/u/genomicstwob/h/optional-task-2
+
+-----
 
 # <img src = "https://user-images.githubusercontent.com/70078984/130058100-b045f3e2-f951-4148-aa71-4388391f5389.png" alt = "contibutors" width = "50" height = "50" /> </a>Contributors
 
 Name | Slack Username | Contribution
 ---| ---| ---
-Orababa Oluwatosin| @Toxhin | Obtaining Dataset and Introduction
-Adeniran Fadekemi| @Morenike| Quality Control of Input Dataset Using FastQC 
-Suchitra Thapa| @Suchitraa| Combining QC Results Using MultiQC
-Michael Olufemi| @Micholufemi| Quality Trimming Using Trimmomatic
+Orababa Oluwatosin| @Toxhin | Introduction
+Orababa Oluwatosin| @Toxhin | Get Your Data
+Adeniran Fadekemi| @Morenike| Quality Control 
+Suchitra Thapa| @Suchitraa| Quality Control 
+Michael Olufemi| @Micholufemi| Quality Control 
 Adedoyin Adesoye| @Adedoyinsoye| Search for Contamination Using Kraken2
 Sobambo Adedotun| @AdunniEagle| Finding Variants Using Snippy
-Ahmed Sameh| @Ahhmedsamehh| Filtering TB Variant	
-Neemah Jinadu| @Neemahj| TB profiling Using TB Profiler Profile
-Camilia Mohamed Kamal| @CamiliaKamal2|	Text Transformation with sed
-Christina Ashraf| @christina| TB variant report
+Ahmed Sameh| @Ahhmedsamehh| Further Variant Filtering and TB Profiling	
+Idowu Jinadu| @Neemahj| Further Variant Filtering and TB Profiling
+Camilia Mohamed Kamal| @CamiliaKamal2|	Further Variant Filtering and TB Profiling
+Christina Ashraf| @christina| Further Variant Filtering and TB Profiling
 Engy Khaled| @Engy|	View Snippy Output in JBrowser
-Hossam Hatim| @HossamHatem|	Obtaining Dataset (OPTIONAL TASK) and Introduction
-Menna|@Mennatullah|	Examining Sequence Quality with FastQC
-Alabi Mosopefoluwa| @Mosopefoluwa|	Examining Sample Composition with Kraken2
-Mustafa Mansour| @Mustafa|	Fetching Data and Introduction
-Amira Tounsi| @AmiraT|	Examining Sequence Quality with FastQC
-Omnia Alaa| @Omnia|	Quality Trimming with Trimmomatic
-Suliat Jimoh| @SuliJimoh|	Finding Variants Using Snippy
-Osmond Obinna| @Osmond|	Running Samtools on the BAM File
-Yomna Yasser| @YomnaElkaramany|	Running BAM Coverage Plotter on the BAM File
+Hossam Hatim| @HossamHatem|	Different Samples, Different Stories (Sample 18-1)
+Menna|@Mennatullah|	Different Samples, Different Stories (Sample 18-1)
+Alabi Mosopefoluwa| @Mosopefoluwa|	Different Samples, Different Stories (Sample 18-1)
+Mustafa Mansour| @Mustafa|	Different Samples, Different Stories (Sample SRR12416842)
+Amira Tounsi| @AmiraT|	Different Samples, Different Stories (Sample SRR12416842)
+Omnia Alaa| @Omnia|	Different Samples, Different Stories (Sample SRR12416842)
+Suliat Jimoh| @SuliJimoh|	Different Samples, Different Stories (Sample SRR12416842)
+Osmond Obinna| @Osmond|	Different Samples, Different Stories (Sample SRR12416842)
+Yomna Yasser| @YomnaElkaramany|	Different Samples, Different Stories (Sample SRR12416842)
 
 
-###### Each team member worked on a subtask in the analysis and updated the markdown.
+###### Each team member worked on a subtask in the analysis and updated the markdown. Members of the team also practiced the entire tutorial on their personal galaxy accounts.
+
+
 ![image](https://user-images.githubusercontent.com/70078984/130058063-fd718b9e-c64e-4611-b44f-93d7a22d132e.png)
