@@ -93,7 +93,13 @@ While one could examine the quality control report for each set of reads (forwar
 
 ## Look For Contamination with Kraken2 (Optional)
 
-
+Looking for contamination in our reads is essential to producing a good work, as other sources of DNA accidentally or inadvertantly get mixed in with our sample and this can  confound our snp analysis. Kraken 2 is an effective way of looking at which species is represented in our reads and so we can easily spot possible contamination of our sample. 
+The already trimmed sequences were used in the kraken analysis highlighting both the 
+-Forward Stand and the Reverse strand
+![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442271/HACKBIO/Screenshot_19_t6vvut.png)
+A report of the analysis was produced later on; 
+![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442272/HACKBIO/Screenshot_20_aly0hu.png)
+From the report generated; it was infered that about 91% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
 ## Find Variants with Snippy
 ###Snippy(Finding variant using Snippy)
 1. Mycobacterium_tuberculosis_ancestral_reference.gbk dataset was used as the reference sequence”: 
