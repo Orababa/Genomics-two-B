@@ -200,10 +200,29 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
 4. A new dataset will be created in your history, containing the JBrowse interactive visualisation
 
 
+ 
+## Different Samples,Different Stories (Optional)
+### feach data and introduction
+1.Fetch the data from EBI European Nucleotide Archive
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
+>>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
+###   check for data quality using fastQC
+  { to find out the quality report} 
+1. Select from options at the left Fasta/Fastq 
+2. Choose FastQC to read quality report **FastQC**
+3. Choose your data set 
+>> insert multiple files, and choose the previously uploaded files
+>> follow default parameters 
+4. press **execute**
+5. Four files will be created composed of two html page for the quality report 
+6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
+
+
 ## Different Samples, Different Stories (Optional)
 
 
 ### A. Hands-on: Take a closer look at sample 18-1
+
 
 
 
@@ -298,6 +317,23 @@ Inspect the Snippy VCF output to check the number of variant discovered by **'Sn
 
 
 ### Samtools Stats
+
+
+### [`Run samtools stat` to generate statistics for BAM dataset]
+
+1. On the tools sections, Search and select `samtools stat 🛠️`
+2. Fill with the following details;
+   >BAM File
+   >> Ensure the mapped reads (bam) file of the snippy output is selected.
+
+3. Keep the rest parameters unchanged.
+
+4. Then `Execute`☑️
+
+5. View the output, paying attention to the sequences, reads mapped and reads unmapped results.
+
+
+
 
 
 
