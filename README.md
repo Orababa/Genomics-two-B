@@ -65,7 +65,7 @@ Search and select `FastQC 🔧⚙️` from tools list and fill in the details be
 + pay attention to the top part where Short read data from your current history is selected
 + leave all other parameters at their default values and click *Execute*.
 
-### <img src = "https://user-images.githubusercontent.com/70078984/130161538-76b88286-3af1-4ffb-a300-20f2eacde894.png" alt = "contents" width = "25" height = "25" /> </a> Tip: To Select Multiple Datasets
+<img src = "https://user-images.githubusercontent.com/70078984/130161538-76b88286-3af1-4ffb-a300-20f2eacde894.png" alt = "contents" width = "25" height = "25" /> </a> Tip: To Select Multiple Datasets
 
 ### 
 click on <img src = "https://user-images.githubusercontent.com/70078984/130161941-23e6c3a1-5d0b-44b8-8aab-5813716f96b4.png" alt = "contents" width = "15" height = "15" /> 
@@ -272,89 +272,91 @@ In a total of 1086 variants the first variant on the list is a Substitution of a
  
 ## Different Samples,Different Stories (Optional)
 
-1. Fetch the data from Zenodo:
-   * choose Optional task 1 history
-   * click on upload data
-   * choosw paste/fetch data
-   * paste your URLs
-      # https://zenodo.org/record/3960260/files/018-1_1.fastq.gz
-      # https://zenodo.org/record/3960260/files/018-1_2.fastq.gz
-   * click on colse
-   
-2.	check for data quality using fastQC
-3.	  { to find out the quality report} 
-4.	1. Select from options at the left Fasta/Fastq 
-5.	2. Choose FastQC to read quality report **FastQC**
-6.	3. Choose your data set 
-7.	>> insert multiple files, and choose the previously uploaded files
-8.	>> follow default parameters 
-9.	4. press **execute**
-10.	5. Four files will be created composed of two html page for the quality report 
-11.	6. Form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
-	
+A southern African M. tuberculosis sample (sample 18-1) from the same study in Zenodo (aka. ERR1750907) is analysed. In some ways, it is quite different from the sample analysed in the tutorial thus far.
+
+### Take a closer look at sample 18-1
+
+1. Fetch the data from Zenodo
+* click on upload data
+* choose paste/fetch data
+* paste your URLs into the text box
+#####
+>https://zenodo.org/record/3960260/files/018-1_1.fastq.gz
+>
+>https://zenodo.org/record/3960260/files/018-1_2.fastq.gz
+* click on `start`, and then `close`
+
+
+
+2. Examine the sequence quality with `FastQC🔧⚙️`
+
+The FastQC tool input form is shown below. Attention should be paid to only the top part where Short read data from your current history is selected. Leave all the other parameters at their default values and click Execute.
+
+![image](https://user-images.githubusercontent.com/70078984/130250472-daeea5e0-a655-4abf-b837-500c04612e7d.png)
+
+
+* four new datasets (one with the calculated raw data and another with an html report of the findings for each input dataset) will get added to the history
+* form the report we got that the data need to be trimmed to remove the bad-quality base pairs, and adaptor contamination 
 
 3. Examine the sample composition with  **`Kraken2 🔧⚙️`** by following the steps below:
+
 * search and select **`Kraken2 🔧⚙️`** from the tools list.
-  * "Single or paired reads": `Paired`
-  * "Forward strand": `018-1_1.fastq.gz`
-  * "Reverse strand": `018-1_2.fastq.gz`
-* "Print scientific names instead of taxids": `Yes`
-* "Enable quick operation": `Yes`
+  * "Single or paired reads": select `Paired`
+  * "Forward strand": select `018-1_1.fastq.gz`
+  * "Reverse strand": select `018-1_2.fastq.gz`
+* "Print scientific names instead of taxids": select `Yes`
+* "Enable quick operation": select `Yes`
 * under "Create report":
-  * “Print a report with aggregrate counts/clade to file”: `Yes`
+  * “Print a report with aggregrate counts/clade to file”: select `Yes`
 * Select a Kraken2 database: Standard
 * **`Execute☑️`**
 
 
 
+The next example is SRR12416842 from an Indonesia study of multi-drug resistant (MDR) tuberculosis.
 
-## introduction 
-Illumina HiSeq 2500 paired end sequencing; Whole genome sequencing analysis of multi-drug resistant Mycobacterium tuberculosis from Java, Indonesia
-
-### fetch data and introduction
+### Take a closer look at sample SRR12416842
 1.Fetch the data from EBI European Nucleotide Archive
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_1.fastq.gz
 >>ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/042/SRR12416842/SRR12416842_2.fastq.gz
 
-### FastQC
-To find out the quality report and to ensure that the raw data looks good and there are no problems in the dataset
+2. Examine the sequence quality with FastQC
 
-1.In the tools list search for **FastQC** and select it
+* In the tools list search for **FastQC** and select it
 
-2.To select the input files
+* To select the input files
 
->>click multiple dataset icon
->>Choose the  two previously uploaded datasets
->>leave the other parameters at their default values
+  * click multiple dataset icon
+  * choose the  two previously uploaded datasets
+  * leave the other parameters at their default values
 
-4.And just click execute
+* click execute
 
-Four new files will be added to your History.
-The result for each datasets will be a HTML report (the webpage file) and the rawData file. 
+Four new files will be added to your history. The result for each datasets will be a HTML report (the webpage file) and the rawData file. 
 
 ![seq quality](https://user-images.githubusercontent.com/88459905/130209416-e192b6c9-ba9e-443e-9af5-77dc9348d94e.PNG)
 ![fs st](https://user-images.githubusercontent.com/88459905/130209463-bc7c5db1-3109-4890-b328-67eda2793be2.PNG)
 
-### quality trimming
- (to clean up the reads and remove the poor quality sections)
+3. Perform quality trimming with Trimmomatic
 
 
-1. search and select **'Trimmomatic'** from the tools list and fill in the details as below
+* search and select **'Trimmomatic'** from the tools list and fill in the details as below
  
-   >>“Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
+  * “Single-end or paired-end reads?”: **_Paired End (two separate input files)_**
    
-   >>“Input FASTQ file (R1/first of pair)”:  SRR12416842_1.fastq.gz
+  * “Input FASTQ file (R1/first of pair)”:  SRR12416842_1.fastq.gz
    
-   >>“Input FASTQ file (R2/second of pair)”:  SRR12416842_2.fastq.gz
+  * “Input FASTQ file (R2/second of pair)”:  SRR12416842_2.fastq.gz
    
-   >>“Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
+  * “Select Trimmomatic operation to perform“ : Keep the default value of Sliding window trimming and adjust the average quality required to 30
    
-2. “+Insert Trimmomatic Operation”:
-   >> “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
-   >> “Minimum length of reads to be kept”: 20
+* “+Insert Trimmomatic Operation”:
+  * “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
+  * “Minimum length of reads to be kept”: 20
   
-3. **`Execute☑️`**
-4. A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
+* **`Execute☑️`**
+
+A new 4 dataset will be created in the history, containing the 4 trimommatic data (2 paired and 2 unpaired) : 
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a2a0e9f4987bf4808/display?to_ext=fastqsanger.gz
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a0c5fe35823cc6abc/display?to_ext=fastqsanger.gz
 >> https://usegalaxy.eu/datasets/11ac94870d0bb33a5947887af43ba1e1/display?to_ext=fastqsanger.gz
