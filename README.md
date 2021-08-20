@@ -267,7 +267,15 @@ Illumina HiSeq 2500 paired end sequencing; Whole genome sequencing analysis of m
 
 
 ### FastQC
+1.In the tools list search for FastQC and select it
+2.To select the input files
+>>click multiple dataset icon
+>>Choose the  two previously uploaded datasets
+>>leave the other parameters at their default values
+4.And just click excute
 
+Four new files will be added to your History.
+The result for each datasets will be a HTML report(the webpage file) and the rawData file 
 
 
 ### Quality trimming
