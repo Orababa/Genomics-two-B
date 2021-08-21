@@ -24,7 +24,7 @@ This markdown contains the comprehensive step-wise procedure carried out during 
 
 ## Get Your Data (by @Toxhin)
 
-The data can be obtained using two methods:
+The data is a sample o f M. tuberculosis collected from a southern African patient (Sample 004-2). The data can be obtained using two methods:
 1. By importing the files from Zenodo.
 - copy the Zenodo link location
 - open the galaxy upload manager and select the fetch/paste option
