@@ -58,7 +58,7 @@ This step serves to identify possible issues with the raw sequenced read input d
 
 Some of the typical problems with NGS data can be reduced by pre-processing affected sequencing reads before trying to map them to the reference genome. Early detection of some other, more severe problems may at least save a lot of time spent on analysing low-quality data that is not worth the effort.
 
-Here is how we performed a standard quality check on our input data.
+Here is how to perform a standard quality check on your input data.
 
 ### Quality Control of the Input Datasets (by @Morenike) 
 Search and select `FastQC 🔧⚙️` from tools list and fill in the details below:
