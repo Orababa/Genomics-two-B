@@ -16,13 +16,15 @@ Reference: <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Ta
 ## Introduction (by @Toxhin)
 *Mycobacterium tuberculosis* is a Gram-positive rod-shaped bacterium that is known to cause tuberculosis. Tuberculosis (TB) is one of the world’s most dangerous infectious diseases and contributes to about 1.4 million annual deaths globally. Mutational changes in the genome of M. tuberculosis strains is one of the major contributing factors to its multidrug resistance nature and increased virulence. 
 
-The genomics-two-B team recreated a galaxy tutorial on M. tuberculosis bacterium variant analysis which aims at identifying the variants, filtering the variants,predicting drug resistance from the identified variants and annotating the variants. This markdown contains the comprehensive step-wise procedure carried out during the recreation of the tutorial.
+The genomics-two-B team recreated a galaxy tutorial on M. tuberculosis bacterium variant analysis which aims at identifying the variants, filtering the variants,predicting drug resistance from the identified variants and annotating the variants. 
+
+This markdown contains the comprehensive step-wise procedure carried out during the recreation of the tutorial.
 
 -----
 
 ## Get Your Data (by @Toxhin)
 
-The data used in the tutorial can be obtained using two methods:
+The data can be obtained using two methods:
 1. By importing the files from Zenodo.
 - copy the Zenodo link location
 - open the galaxy upload manager and select the fetch/paste option
@@ -88,7 +90,7 @@ While one could indepedently examine the quality control report for each set of 
       
          * `Type of FastQC output?`: **Raw data**
          * `FastQC output`: Select both RawData files as shown below:
-         ![Input_details](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_1.png)
+       ![Input_details](https://github.com/suchitrathapa/Microchitra/blob/main/MultiQC_1.png)
 2. Keep the remaining parameters unchanged
 3. Then **`Execute☑️`**
 4. Observe the output MultiQC webpage file by clicking on 👁️ button on the file.
@@ -102,7 +104,7 @@ While one could indepedently examine the quality control report for each set of 
 * “Single-end or paired-end reads?”: select "Paired End (two separate input files)"
 * <img src = "https://user-images.githubusercontent.com/70078984/130161941-23e6c3a1-5d0b-44b8-8aab-5813716f96b4.png" alt = "contents" width = "15" height = "15" />  “Input FASTQ file (R1/first of pair)”: select "004-2_1.fastq.gz"
 * <img src = "https://user-images.githubusercontent.com/70078984/130161941-23e6c3a1-5d0b-44b8-8aab-5813716f96b4.png" alt = "contents" width = "15" height = "15" />  “Input FASTQ file (R2/second of pair)”: select "004-2_2.fastq.gz"
-* Select "Trimmomatic operation to perform" and 
+* select "Trimmomatic operation to perform" and 
   * Keep the default value of **Sliding window trimming** and adjust the average quality required to 30
 * select “+Insert Trimmomatic Operation”
   * click on “Select Trimmomatic operation to perform”: Drop reads below a specified length (MINLEN)
@@ -124,7 +126,7 @@ Kraken 2 is an effective way of looking at which species is represented in our r
 1. search and select `Kraken2 🔧⚙️` from the search tools. The steps  are shown below:
  
   * “Single or paired reads”: select "Paired"
-  * the already trimmed reads are used in the kraken analysis highlighting both the Forward Stand (R1 paired) and the Reverse strand (R2 paired)
+  * use the trimmed reads in the kraken analysis highlighting both the Forward Stand (R1 paired) and the Reverse strand (R2 paired)
 * Print scientific names instead of just taxids”: select "Yes"
 * “Enable quick operation”: select "Yes"
 * under “Create reports”:
@@ -134,13 +136,6 @@ Kraken 2 is an effective way of looking at which species is represented in our r
 
 2. inspect the report produced by Kraken
 
-![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442271/HACKBIO/Screenshot_19_t6vvut.png)
-
-A report of the analysis was produced later on:
- 
-![](https://res.cloudinary.com/adedoyinsoye/image/upload/v1629442272/HACKBIO/Screenshot_20_aly0hu.png)
-
-From the report generated; it was inferred that about 94.02% of the reads were positively identified as Mycobacterium. The others found were bacteria from the same kingdom. There were no contaminating human or viral sequences detected.
 
 -----
 
@@ -178,11 +173,6 @@ An annotated reference built from the inferred M. tuberculosis ancestral referen
 - deselect others
 
 8. click on **`Execute☑️`** 
-
-9. the following results are obtained
-
-In a total of 1086 variants the first variant on the list is a Substitution of a C to a T which is supported by 134 reads.
-![](https://res.cloudinary.com/adedotun/image/upload/v1629387184/samples/hackbio%20task/snippy_C-T_l0xyp7.png)
 
 -----
 
@@ -313,8 +303,6 @@ follow the steps below:
 * Select a Kraken2 database: Standard
 * **`Execute☑️`**
 
-####
-Only 55.58% of the sequence reads are associated with the genus Mycobacterium. This poor classification may be due to quality problems in the sequence reads. These problems will definitely make variant calling less reliable.
 
 -----
 
@@ -463,5 +451,11 @@ Yomna Yasser| @YomnaElkaramany|	Different Samples, Different Stories (Sample SRR
 
 ###### Each team member worked on a subtask in the analysis and updated the markdown. Members of the team also practiced the entire tutorial on their personal galaxy accounts.
 
+the tutorial reproduced was obatined from: https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.html
+
+![image](https://user-images.githubusercontent.com/70078984/130314125-789968eb-312e-4570-8d7a-515dad05b5a5.png)
+
+
+The reproduction of this tutorial was encouraged by HackBio
 
 ![image](https://user-images.githubusercontent.com/70078984/130058063-fd718b9e-c64e-4611-b44f-93d7a22d132e.png)
