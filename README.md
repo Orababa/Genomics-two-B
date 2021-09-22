@@ -320,11 +320,11 @@ The next example is SRR12416842 from an Indonesia study of multi-drug resistant 
 
 * To select the input files
 
-  * click multiple dataset icon
-  * choose the  two previously uploaded datasets
-  * leave the other parameters at their default values
+  * Click multiple dataset icon
+  * Choose the  two previously uploaded datasets
+  * Leave the other parameters at their default values
 
-* click execute
+* Click execute
 
 Four new files will be added to your history. The result for each dataset will be a HTML report (the webpage file) and the rawData file. 
 
