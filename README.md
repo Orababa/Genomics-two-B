@@ -1,5 +1,5 @@
 # Genomics-two-B: Genomics Lab Working on Targeted Sequencing Dataset
-## M. tuberculosis Variant Analysis
+## *Mycobacterium tuberculosis* Variant Analysis
 
 ## <img src = "https://user-images.githubusercontent.com/70078984/130062938-6e2101b6-73f2-49b4-9ee9-22dd919f8dae.png" alt = "contents" width = "40" height = "40" /> </a> Contents
 - [Introduction](#introduction)
